@@ -1,0 +1,16 @@
+# swe-loop, Milestone 1. One fast check; the multi-check form is the target design.
+[instrument]
+paths = ["tests/"]
+
+[checks.fast]
+cmd = "uv run --extra tests python -m pytest -q --benchmark-disable --junitxml=.swe-loop/junit.xml"
+report = "junit"
+path = ".swe-loop/junit.xml"
+
+[done]
+fast_green = true
+
+[budget]
+max_cycles = 30
+max_minutes = 90
+episode_tokens = 1_000_000
