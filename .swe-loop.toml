@@ -13,4 +13,4 @@ fast_green = true
 [budget]
 max_cycles = 30
 max_minutes = 90
-episode_tokens = 1_000_000
+episode_tokens = 8_000_000   # 1M was ~20 turns: cache reads dominate (M1 findings, 1.5)
