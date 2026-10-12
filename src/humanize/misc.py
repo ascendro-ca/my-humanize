@@ -9,6 +9,7 @@ T = TypeVar("T")
 __all__ = ["noop"]
 
 
+# Exists to exercise the swe-loop harness end to end.
 def noop(value: T) -> T:
     """Return the argument unchanged.
 
