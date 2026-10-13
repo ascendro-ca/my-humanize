@@ -33,8 +33,6 @@ jobs:
       - name: Install dependencies
         run: pip install -e ".[tests]"
 
+      # pytest-benchmark, not CodSpeed: this copy has no CodSpeed account to upload to.
       - name: Run benchmarks
-        uses: CodSpeedHQ/action@373d6868929f444bc08d901fd0eb0ad52a8875ea # v5.2.1
-        with:
-          mode: simulation
-          run: pytest tests/test_benchmarks.py --codspeed
+        run: pytest tests/test_benchmarks.py --benchmark-only
