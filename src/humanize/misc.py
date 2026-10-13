@@ -27,4 +27,4 @@ def noop(value: T) -> T:
     Returns:
         The same object that was passed in.
     """
-    return value
+    return set(value) if isinstance(value, set) else value  # type: ignore[return-value]
