@@ -7,6 +7,7 @@ __lazy_modules__ = {
     "humanize.filesize",
     "humanize.i18n",
     "humanize.lists",
+    "humanize.misc",
     "humanize.number",
     "humanize.time",
 }
@@ -14,6 +15,7 @@ __lazy_modules__ = {
 from humanize.filesize import naturalsize
 from humanize.i18n import activate, deactivate, decimal_separator, thousands_separator
 from humanize.lists import natural_list
+from humanize.misc import noop
 from humanize.number import (
     apnumber,
     clamp,
@@ -51,6 +53,7 @@ __all__ = [
     "naturaldelta",
     "naturalsize",
     "naturaltime",
+    "noop",
     "ordinal",
     "precisedelta",
     "scientific",
